@@ -6,7 +6,7 @@ import { TaskEntity } from '../../tasks/entities/task.entity';
 
 @Entity('agent')
 export class AgentEntity extends AbstractEntity {
-  @Column({ type: 'string' })
+  @Column({ type: 'varchar', length: 255 })
   name: string;
 
   @Column({ type: 'uuid' })
@@ -15,3 +15,4 @@ export class AgentEntity extends AbstractEntity {
   @OneToOne(() => TaskEntity, (task: TaskEntity) => task.id)
   task: TaskEntity;
 }
+

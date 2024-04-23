@@ -7,10 +7,10 @@ import { AgentEntity } from '../../agents/entities/agent.entity';
 
 @Entity('task')
 export class TaskEntity extends AbstractEntity {
-  @Column({ type: 'string' })
+  @Column({ type: 'varchar', length: 255 })
   name: string;
 
-  @Column({ type: 'string' })
+  @Column({ type: 'varchar', length: 255 })
   description: string;
 
   @Column({ type: 'uuid' })

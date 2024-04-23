@@ -10,6 +10,14 @@ Enhance your Nx experience by installing [Nx Console](https://nx.dev/nx-console)
 provides an interactive UI to view your projects, run tasks, generate code, and more! Available for VSCode, IntelliJ and
 comes with a LSP for Vim users.
 
+## Instructions
+ - Install CLIs. 
+ - `npm install -g @nestjs/cli` [NestJS](https://docs.nestjs.com/cli/overview) 
+ - `npm install -g @angular/cli` [Angular](https://angular.io/cli)
+ - `npm add --global nx@latest` [Nx](https://nx.dev/getting-started/intro) 
+ - Install docker: https://www.docker.com/products/docker-desktop/
+ - Run: `docker-compose up -d`
+
 ## Start the application
 
 Run `npx nx serve server` to start the development server. 
