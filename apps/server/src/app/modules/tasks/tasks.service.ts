@@ -1,26 +1,30 @@
 import { Injectable } from '@nestjs/common';
+import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
+
+import { ITask } from '@interfaces/task.interface';
+import { TaskEntity } from './entities/task.entity';
 import { CreateTaskDto } from './dto/create-task.dto';
-import { UpdateTaskDto } from './dto/update-task.dto';
+import { mapCreateTaskDataToTaskEntity, mapTaskEntityToTask } from './mappers/task-entity.mapper';
 
 @Injectable()
 export class TasksService {
-  create(createTaskDto: CreateTaskDto) {
-    return 'This action adds a new task';
+
+  constructor(@InjectRepository(TaskEntity) private repository: Repository<TaskEntity>) { }
+
+  // https://orkhan.gitbook.io/typeorm/docs/repository-api#repository-api
+  async create(data: CreateTaskDto): Promise<ITask> {
+    const taskCandidate = mapCreateTaskDataToTaskEntity(data);
+
+    const entity = await this.repository.save(taskCandidate);
+
+    return mapTaskEntityToTask(entity);
   }
 
-  findAll() {
-    return `This action returns all tasks`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} task`;
-  }
-
-  update(id: number, updateTaskDto: UpdateTaskDto) {
-    return `This action updates a #${id} task`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} task`;
+  async findOne(id: string): Promise<TaskEntity> {
+    return await this.repository.findOne({
+      where: { id },
+      select: ['transaction']
+    });
   }
 }

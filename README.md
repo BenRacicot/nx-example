@@ -12,7 +12,8 @@ comes with a LSP for Vim users.
 
 ## Start the application
 
-Run `npx nx serve example` to start the development server. Happy coding!
+Run `npx nx serve server` to start the development server. 
+Run `npx nx serve client` to start the development client. 
 
 ## Build for production
 

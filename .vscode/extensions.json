@@ -1,7 +1,11 @@
 {
   "recommendations": [
-    "nrwl.angular-console",
+    "angular.ng-template",
+    "cyrilletuzi.angular-schematics",
+    "johnpapa.angular2",
+    "pucelle.vscode-css-navigation",
+    "dbaeumer.vscode-eslint",
+    "bradgashler.htmltagwrap",
     "esbenp.prettier-vscode",
-    "firsttris.vscode-jest-runner"
   ]
 }
