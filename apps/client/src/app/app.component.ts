@@ -16,9 +16,10 @@ import { ApiService } from './services/api.service';
 })
 export class AppComponent implements OnInit {
   url = 'tasks';
-
   task!: ITask;
+
   constructor(private apiService: ApiService) { }
+
   ngOnInit(): void {
     this.getTask('1234');
   }
