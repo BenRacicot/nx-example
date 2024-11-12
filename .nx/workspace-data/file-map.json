@@ -1,0 +1,521 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.0.13",
+  "pathMappings": {
+    "@example/utils": [
+      "utils/src/index.ts"
+    ],
+    "@interfaces/*": [
+      "utils/src/lib/interfaces/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "name": "@nx/cypress/plugin",
+      "options": {
+        "targetName": "e2e",
+        "componentTestingTargetName": "component-test"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "README.md",
+        "hash": "628625942425629471"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "9402562240590313610"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "8142565445716777732"
+      },
+      {
+        "file": "npm-install-87147.sh",
+        "hash": "2496751648001979831"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1893606824445445448"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "4234128182650073333"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "package.json",
+        "hash": "15341719864542499002"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "4603297071107759893"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "8491837053101957257"
+      }
+    ],
+    "projectFileMap": {
+      "utils": [
+        {
+          "file": "utils/.eslintrc.json",
+          "hash": "13365499647183331872"
+        },
+        {
+          "file": "utils/README.md",
+          "hash": "3816604565008484386"
+        },
+        {
+          "file": "utils/jest.config.ts",
+          "hash": "1386489928693140573"
+        },
+        {
+          "file": "utils/package.json",
+          "hash": "3589668095687305871"
+        },
+        {
+          "file": "utils/project.json",
+          "hash": "431318555708007474"
+        },
+        {
+          "file": "utils/src/index.ts",
+          "hash": "5679720557803443103"
+        },
+        {
+          "file": "utils/src/lib/interfaces/index.ts",
+          "hash": "14167936792437229655"
+        },
+        {
+          "file": "utils/src/lib/interfaces/task.interface.ts",
+          "hash": "4072787364956163727"
+        },
+        {
+          "file": "utils/src/lib/interfaces/transaction.interface.ts",
+          "hash": "7755982920786151626"
+        },
+        {
+          "file": "utils/src/lib/utils.ts",
+          "hash": "17287710670217841263"
+        },
+        {
+          "file": "utils/tsconfig.json",
+          "hash": "14743107262561274896"
+        },
+        {
+          "file": "utils/tsconfig.lib.json",
+          "hash": "14539327243516648733"
+        },
+        {
+          "file": "utils/tsconfig.spec.json",
+          "hash": "17313551537729802733"
+        }
+      ],
+      "client": [
+        {
+          "file": "apps/client/.eslintrc.json",
+          "hash": "10064041821441293621"
+        },
+        {
+          "file": "apps/client/jest.config.ts",
+          "hash": "325689089722790099"
+        },
+        {
+          "file": "apps/client/project.json",
+          "hash": "5095980247671128511"
+        },
+        {
+          "file": "apps/client/src/app/app.component.html",
+          "hash": "6746193094165222385"
+        },
+        {
+          "file": "apps/client/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/client/src/app/app.component.ts",
+          "hash": "10691108547315538580",
+          "deps": [
+            "utils"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/app.config.ts",
+          "hash": "10618457967269332155",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/app.routes.ts",
+          "hash": "6185150965714414910",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/nx-welcome.component.ts",
+          "hash": "4651165617211660296",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/services/api.service.ts",
+          "hash": "17493588679315167400",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/client/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/client/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/client/src/index.html",
+          "hash": "3839546392168004710"
+        },
+        {
+          "file": "apps/client/src/main.ts",
+          "hash": "7078850652959839020",
+          "deps": [
+            "npm:@angular/platform-browser",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/client/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/client/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/client/tsconfig.app.json",
+          "hash": "8365644956319658761"
+        },
+        {
+          "file": "apps/client/tsconfig.editor.json",
+          "hash": "1055794200401717100"
+        },
+        {
+          "file": "apps/client/tsconfig.json",
+          "hash": "10165753922017812673"
+        },
+        {
+          "file": "apps/client/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "server": [
+        {
+          "file": "apps/server/.env",
+          "hash": "5680368967384851033"
+        },
+        {
+          "file": "apps/server/.env.example",
+          "hash": "5680368967384851033"
+        },
+        {
+          "file": "apps/server/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "apps/server/jest.config.ts",
+          "hash": "4920721498772935253"
+        },
+        {
+          "file": "apps/server/project.json",
+          "hash": "3910432068617418250"
+        },
+        {
+          "file": "apps/server/src/app/app.controller.ts",
+          "hash": "9005150069945785676",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/app.module.ts",
+          "hash": "2865942033186485691",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/app.service.ts",
+          "hash": "9967902337593410053",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/database/database.module.ts",
+          "hash": "2965359431835332355",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/database/strategies/snake-naming.strategy.ts",
+          "hash": "9794624662441281670",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/database/typeorm.config.ts",
+          "hash": "12900811857019074451",
+          "deps": [
+            "npm:dotenv",
+            "npm:typeorm",
+            "npm:typeorm-extension"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/agents/agents.controller.ts",
+          "hash": "434676492302910361",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/agents/agents.module.ts",
+          "hash": "3161177721640318336",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/agents/agents.service.ts",
+          "hash": "7791076269066616922",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/agents/dto/create-agent.dto.ts",
+          "hash": "8501429090280387700"
+        },
+        {
+          "file": "apps/server/src/app/modules/agents/dto/update-agent.dto.ts",
+          "hash": "4457068347890406837",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/agents/entities/agent.entity.ts",
+          "hash": "6539414282458320402",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/tasks/dto/create-task.dto.ts",
+          "hash": "12598125003283105399",
+          "deps": [
+            "npm:@nestjs/swagger",
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/tasks/dto/update-task.dto.ts",
+          "hash": "4840927400262688412",
+          "deps": [
+            "npm:@nestjs/mapped-types"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/tasks/entities/task.entity.ts",
+          "hash": "3834326994303313583",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/tasks/mappers/task-entity.mapper.ts",
+          "hash": "10825406448953185412",
+          "deps": [
+            "utils"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/tasks/tasks.controller.ts",
+          "hash": "12753878841325488745",
+          "deps": [
+            "utils"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/tasks/tasks.module.ts",
+          "hash": "10905911690307197846",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/tasks/tasks.service.ts",
+          "hash": "6975205650550673654",
+          "deps": [
+            "utils"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/transactions/dto/create-transaction.dto.ts",
+          "hash": "17465622295929372294",
+          "deps": [
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/transactions/dto/update-transaction.dto.ts",
+          "hash": "17098118759923537274",
+          "deps": [
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/transactions/entities/transaction.entity.ts",
+          "hash": "6649700002843974287",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/transactions/mappers/transaction.mappers.ts",
+          "hash": "3268102207177721478",
+          "deps": [
+            "utils"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/transactions/transactions.controller.ts",
+          "hash": "3222844889974491648",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/transactions/transactions.module.ts",
+          "hash": "13650763201422436747",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/modules/transactions/transactions.service.ts",
+          "hash": "6771643170506904333",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/server/src/app/shared/abstract.entity.ts",
+          "hash": "4503841053335257839",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/server/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/server/src/main.ts",
+          "hash": "11205222914964382693",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "apps/server/tsconfig.app.json",
+          "hash": "3171572500325445971"
+        },
+        {
+          "file": "apps/server/tsconfig.json",
+          "hash": "3490524966360018312"
+        },
+        {
+          "file": "apps/server/tsconfig.spec.json",
+          "hash": "11550347367511341917"
+        },
+        {
+          "file": "apps/server/webpack.config.js",
+          "hash": "2438053487577644745",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ]
+    }
+  }
+}

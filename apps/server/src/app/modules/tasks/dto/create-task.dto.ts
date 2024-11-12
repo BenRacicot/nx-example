@@ -7,7 +7,7 @@ export class CreateTaskDto {
     example: '3fe9de5a-75e0-44f4-9b35-e7bffaf0c872',
   })
   @IsOptional()
-  @IsUUID() // <-- uuids, not numbered ids (its 2024)
+  @IsUUID() // <-- uuids (uuidv7) not numbered ids (its 2024)
   readonly id?: string;
 
   @ApiPropertyOptional({
