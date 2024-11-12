@@ -8,20 +8,20 @@ import { AgentEntity } from '../../agents/entities/agent.entity';
 @Entity('task')
 export class TaskEntity extends AbstractEntity {
   @Column({ type: 'varchar', length: 255 })
-  name: string;
+  name?: string;
 
   @Column({ type: 'varchar', length: 255 })
-  description: string;
+  description?: string;
 
   @Column({ type: 'uuid' })
-  agentId: string;
+  agentId?: string;
 
   @OneToOne(() => AgentEntity, (agent: AgentEntity) => agent.id)
-  agent: AgentEntity;
+  agent?: AgentEntity;
 
   @Column({ type: 'uuid' })
-  transactionId: string;
+  transactionId?: string;
 
   @ManyToOne(() => TransactionEntity, (transaction: TransactionEntity) => transaction.id)
-  transaction: TransactionEntity;
+  transaction?: TransactionEntity;
 }

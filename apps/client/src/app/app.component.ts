@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { NxWelcomeComponent } from './nx-welcome.component';
 
-import { ITask } from '@interfaces/task.interface';
+import { ICreateTaskDto, ITask, IUpdateTaskDto } from '@interfaces';
 import { ApiService } from './services/api.service';
 
 @Component({
@@ -24,8 +24,15 @@ export class AppComponent implements OnInit {
     this.getTask('1234');
   }
 
-  // EXAMPLE REQUEST
+  createTask(): Observable<ICreateTaskDto> {
+    return this.apiService.post<ITask>(`${this.url}`, );
+  }
+
   getTask(id: string): Observable<ITask> {
     return this.apiService.get<ITask>(`${this.url}/${id}`);
+  }
+
+  updateTask(id: string, req: IUpdateTaskDto): Observable<ITask> {
+    return this.apiService.patch<ITask>(`${this.url}/${id}`, req);
   }
 }

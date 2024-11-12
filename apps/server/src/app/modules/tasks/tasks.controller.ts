@@ -4,11 +4,13 @@ import {
   Post,
   Body,
   Param,
+  Patch,
 } from '@nestjs/common';
 
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
-import { ITask } from '@interfaces/task.interface';
+import { UpdateTaskDto } from './dto/update-task.dto';
+import { ITask } from '@interfaces';
 
 @Controller('tasks')
 export class TasksController {
@@ -20,14 +22,14 @@ export class TasksController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): Promise<ITask> {
+  findOne(@Param('id') id: string): Promise<ITask | null> {
     return this.tasksService.findOne(id);
   }
 
-  // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updateTaskDto: UpdateTaskDto) {
-  //   return this.tasksService.update(+id, updateTaskDto);
-  // }
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() req: UpdateTaskDto) {
+    return this.tasksService.update(id, req);
+  }
 
   // @Delete(':id')
   // remove(@Param('id') id: string) {

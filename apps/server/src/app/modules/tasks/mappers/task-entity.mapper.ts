@@ -1,17 +1,15 @@
 import { ITask } from "@interfaces/task.interface";
-import { CreateTaskDto } from "../dto/create-task.dto";
+
 import { TaskEntity } from "../entities/task.entity";
 import { mapTransactionEntitytoTransaction } from "../../transactions/mappers/transaction.mappers";
+import { CreateTaskDto } from "apps/server/src/app/modules/tasks/dto/create-task.dto";
 
-export const mapCreateTaskDataToTaskEntity = (requestBody: CreateTaskDto): TaskEntity => {
+export const mapCreateTaskDataToTaskEntity = (req: CreateTaskDto): TaskEntity => {
   const entity: TaskEntity = new TaskEntity();
+  entity.id = 'abcdef'; // uuidv7
 
-  if (requestBody.id) {
-    entity.id = requestBody.id;
-  }
-
-  entity.name = requestBody.name;
-  entity.description = requestBody.description;
+  entity.name = req.name;
+  entity.description = req.description;
 
   return entity;
 };

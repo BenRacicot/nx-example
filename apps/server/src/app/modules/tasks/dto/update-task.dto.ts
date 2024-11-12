@@ -1,14 +1,20 @@
-import { PartialType } from '@nestjs/mapped-types';
+import { ApiPropertyOptional } from '@nestjs/swagger';
+import { IsOptional, IsString } from 'class-validator';
 
-class CreateTaskDto {
-  name: string;
-  description: string;
-  agent?: {
-    id?: number;
-  }; 
-  transaction: {
-    id: number;
-  };
+export class UpdateTaskDto {
+  @ApiPropertyOptional({
+    description: 'name',
+    example: 'Ben Racicot',
+  })
+  @IsOptional()
+  @IsString()
+  readonly name?: string;
+
+  @ApiPropertyOptional({
+    description: 'description',
+    example: 'This task is about ...',
+  })
+  @IsOptional()
+  @IsString()
+  readonly description?: string;
 }
-
-export class UpdateTaskDto extends PartialType(CreateTaskDto) {} 
