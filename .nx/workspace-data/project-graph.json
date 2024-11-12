@@ -1737,42 +1737,6 @@
         "hash": "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
       }
     },
-    "npm:chokidar@3.6.0": {
-      "type": "npm",
-      "name": "npm:chokidar@3.6.0",
-      "data": {
-        "version": "3.6.0",
-        "packageName": "chokidar",
-        "hash": "sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw=="
-      }
-    },
-    "npm:chokidar": {
-      "type": "npm",
-      "name": "npm:chokidar",
-      "data": {
-        "version": "4.0.1",
-        "packageName": "chokidar",
-        "hash": "sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA=="
-      }
-    },
-    "npm:glob-parent@5.1.2": {
-      "type": "npm",
-      "name": "npm:glob-parent@5.1.2",
-      "data": {
-        "version": "5.1.2",
-        "packageName": "glob-parent",
-        "hash": "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow=="
-      }
-    },
-    "npm:glob-parent": {
-      "type": "npm",
-      "name": "npm:glob-parent",
-      "data": {
-        "version": "6.0.2",
-        "packageName": "glob-parent",
-        "hash": "sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A=="
-      }
-    },
     "npm:inquirer@9.2.15": {
       "type": "npm",
       "name": "npm:inquirer@9.2.15",
@@ -1870,24 +1834,6 @@
         "version": "4.0.2",
         "packageName": "picomatch",
         "hash": "sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg=="
-      }
-    },
-    "npm:readdirp@3.6.0": {
-      "type": "npm",
-      "name": "npm:readdirp@3.6.0",
-      "data": {
-        "version": "3.6.0",
-        "packageName": "readdirp",
-        "hash": "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA=="
-      }
-    },
-    "npm:readdirp": {
-      "type": "npm",
-      "name": "npm:readdirp",
-      "data": {
-        "version": "4.0.2",
-        "packageName": "readdirp",
-        "hash": "sha512-yDMz9g+VaZkqBYS/ozoBJwaBhTbZo3UNYQHNRw1D3UFQB8oHB4uS/tAODO+ZLjGWmUbKnIlOWO+aaIiAxrUWHA=="
       }
     },
     "npm:run-async@3.0.0": {
@@ -2014,6 +1960,42 @@
         "version": "18.2.11",
         "packageName": "@angular/compiler-cli",
         "hash": "sha512-YJlAOiXZUYP6/RK9isu5AOucmNZhFB9lpY/beMzkkWgDku+va8szm4BZbLJFz176IUteyLWF3IP4aE7P9OBlXw=="
+      }
+    },
+    "npm:chokidar@4.0.1": {
+      "type": "npm",
+      "name": "npm:chokidar@4.0.1",
+      "data": {
+        "version": "4.0.1",
+        "packageName": "chokidar",
+        "hash": "sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA=="
+      }
+    },
+    "npm:chokidar": {
+      "type": "npm",
+      "name": "npm:chokidar",
+      "data": {
+        "version": "3.6.0",
+        "packageName": "chokidar",
+        "hash": "sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw=="
+      }
+    },
+    "npm:readdirp@4.0.2": {
+      "type": "npm",
+      "name": "npm:readdirp@4.0.2",
+      "data": {
+        "version": "4.0.2",
+        "packageName": "readdirp",
+        "hash": "sha512-yDMz9g+VaZkqBYS/ozoBJwaBhTbZo3UNYQHNRw1D3UFQB8oHB4uS/tAODO+ZLjGWmUbKnIlOWO+aaIiAxrUWHA=="
+      }
+    },
+    "npm:readdirp": {
+      "type": "npm",
+      "name": "npm:readdirp",
+      "data": {
+        "version": "3.6.0",
+        "packageName": "readdirp",
+        "hash": "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA=="
       }
     },
     "npm:@angular/core": {
@@ -3247,6 +3229,24 @@
         "version": "1.1.26",
         "packageName": "@compodoc/compodoc",
         "hash": "sha512-CJkqTtdotxMA4SDyUx8J6Mrm3MMmcgFtfEViUnG9Of2CXhYiXIqNeD881+pxn0opmMC+VCTL0/SCD03tDYhWYA=="
+      }
+    },
+    "npm:glob-parent@5.1.2": {
+      "type": "npm",
+      "name": "npm:glob-parent@5.1.2",
+      "data": {
+        "version": "5.1.2",
+        "packageName": "glob-parent",
+        "hash": "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow=="
+      }
+    },
+    "npm:glob-parent": {
+      "type": "npm",
+      "name": "npm:glob-parent",
+      "data": {
+        "version": "6.0.2",
+        "packageName": "glob-parent",
+        "hash": "sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A=="
       }
     },
     "npm:@compodoc/live-server": {
@@ -17372,6 +17372,11 @@
     "npm:@angular-devkit/core": [
       {
         "source": "npm:@angular-devkit/core",
+        "target": "npm:chokidar",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular-devkit/core",
         "target": "npm:ajv",
         "type": "static"
       },
@@ -17463,7 +17468,7 @@
     "npm:@angular-devkit/core@17.3.11": [
       {
         "source": "npm:@angular-devkit/core@17.3.11",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -17558,55 +17563,6 @@
         "type": "static"
       }
     ],
-    "npm:chokidar@3.6.0": [
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:anymatch",
-        "type": "static"
-      },
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:braces",
-        "type": "static"
-      },
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:glob-parent@5.1.2",
-        "type": "static"
-      },
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:is-binary-path",
-        "type": "static"
-      },
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:is-glob",
-        "type": "static"
-      },
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:normalize-path",
-        "type": "static"
-      },
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:readdirp@3.6.0",
-        "type": "static"
-      },
-      {
-        "source": "npm:chokidar@3.6.0",
-        "target": "npm:fsevents",
-        "type": "static"
-      }
-    ],
-    "npm:glob-parent@5.1.2": [
-      {
-        "source": "npm:glob-parent@5.1.2",
-        "target": "npm:is-glob",
-        "type": "static"
-      }
-    ],
     "npm:inquirer@9.2.15": [
       {
         "source": "npm:inquirer@9.2.15",
@@ -17688,13 +17644,6 @@
       {
         "source": "npm:magic-string@0.30.8",
         "target": "npm:@jridgewell/sourcemap-codec",
-        "type": "static"
-      }
-    ],
-    "npm:readdirp@3.6.0": [
-      {
-        "source": "npm:readdirp@3.6.0",
-        "target": "npm:picomatch@2.3.1",
         "type": "static"
       }
     ],
@@ -18136,7 +18085,7 @@
       },
       {
         "source": "npm:@angular/compiler-cli",
-        "target": "npm:chokidar",
+        "target": "npm:chokidar@4.0.1",
         "type": "static"
       },
       {
@@ -18162,6 +18111,13 @@
       {
         "source": "npm:@angular/compiler-cli",
         "target": "npm:yargs",
+        "type": "static"
+      }
+    ],
+    "npm:chokidar@4.0.1": [
+      {
+        "source": "npm:chokidar@4.0.1",
+        "target": "npm:readdirp@4.0.2",
         "type": "static"
       }
     ],
@@ -20563,7 +20519,7 @@
       },
       {
         "source": "npm:@compodoc/compodoc",
-        "target": "npm:chokidar",
+        "target": "npm:chokidar@4.0.1",
         "type": "static"
       },
       {
@@ -20747,7 +20703,7 @@
     "npm:@angular-devkit/core@18.2.8": [
       {
         "source": "npm:@angular-devkit/core@18.2.8",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -20778,6 +20734,55 @@
       {
         "source": "npm:@angular-devkit/core@18.2.8",
         "target": "npm:source-map",
+        "type": "static"
+      }
+    ],
+    "npm:chokidar": [
+      {
+        "source": "npm:chokidar",
+        "target": "npm:anymatch",
+        "type": "static"
+      },
+      {
+        "source": "npm:chokidar",
+        "target": "npm:braces",
+        "type": "static"
+      },
+      {
+        "source": "npm:chokidar",
+        "target": "npm:glob-parent@5.1.2",
+        "type": "static"
+      },
+      {
+        "source": "npm:chokidar",
+        "target": "npm:is-binary-path",
+        "type": "static"
+      },
+      {
+        "source": "npm:chokidar",
+        "target": "npm:is-glob",
+        "type": "static"
+      },
+      {
+        "source": "npm:chokidar",
+        "target": "npm:normalize-path",
+        "type": "static"
+      },
+      {
+        "source": "npm:chokidar",
+        "target": "npm:readdirp",
+        "type": "static"
+      },
+      {
+        "source": "npm:chokidar",
+        "target": "npm:fsevents",
+        "type": "static"
+      }
+    ],
+    "npm:readdirp": [
+      {
+        "source": "npm:readdirp",
+        "target": "npm:picomatch@2.3.1",
         "type": "static"
       }
     ],
@@ -21278,10 +21283,17 @@
         "type": "static"
       }
     ],
+    "npm:glob-parent@5.1.2": [
+      {
+        "source": "npm:glob-parent@5.1.2",
+        "target": "npm:is-glob",
+        "type": "static"
+      }
+    ],
     "npm:@compodoc/live-server": [
       {
         "source": "npm:@compodoc/live-server",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -23192,7 +23204,7 @@
       },
       {
         "source": "npm:@nestjs/cli",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -24863,7 +24875,7 @@
     "npm:@angular-devkit/core@16.0.1": [
       {
         "source": "npm:@angular-devkit/core@16.0.1",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -25353,7 +25365,7 @@
       },
       {
         "source": "npm:fork-ts-checker-webpack-plugin@7.2.13",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -27906,13 +27918,6 @@
       {
         "source": "npm:cheerio-select",
         "target": "npm:domutils",
-        "type": "static"
-      }
-    ],
-    "npm:chokidar": [
-      {
-        "source": "npm:chokidar",
-        "target": "npm:readdirp",
         "type": "static"
       }
     ],
@@ -30622,7 +30627,7 @@
       },
       {
         "source": "npm:fork-ts-checker-webpack-plugin",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -34207,7 +34212,7 @@
       },
       {
         "source": "npm:ng-packagr",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -36405,7 +36410,7 @@
     "npm:sass": [
       {
         "source": "npm:sass",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
@@ -38735,7 +38740,7 @@
       },
       {
         "source": "npm:webpack-dev-server",
-        "target": "npm:chokidar@3.6.0",
+        "target": "npm:chokidar",
         "type": "static"
       },
       {
