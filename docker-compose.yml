@@ -1,17 +1,22 @@
-version: '3.8'
 services:
   db:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
+    image: postgres:latest
     restart: always
     env_file:
       - apps/server/.env
     environment:
-      - MYSQL_ROOT_PASSWORD=testing
-      - MYSQL_DATABASE=development
+      - POSTGRES_USER=${DB_USERNAME:-postgres}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
+      - POSTGRES_DB=${DB_NAME:-nx_example}  # Match this with your TypeORM config
     ports:
-      - '3306:3306'
+      - '5433:5432'  # Note: You're using port 5433 locally
     volumes:
-      - db_data:/var/lib/mysql
+      - nx_example:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
 volumes:
-  db_data:
+  nx_example:
