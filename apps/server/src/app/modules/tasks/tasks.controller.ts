@@ -5,6 +5,7 @@ import {
   Body,
   Param,
   Patch,
+  Logger,
 } from '@nestjs/common';
 
 import { TasksService } from './tasks.service';
@@ -22,7 +23,8 @@ export class TasksController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): Promise<ITask | null> {
+  findOne(@Param('id') id: string): Promise<ITask> {
+    Logger.log(JSON.stringify(id, null, 2), '');
     return this.tasksService.findOne(id);
   }
 

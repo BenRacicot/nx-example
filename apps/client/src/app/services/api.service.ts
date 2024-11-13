@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private api_url = 'http://localhost:3000'; // FOR LOCAL
+  private api_url = 'http://localhost:3000/api/'; // FOR LOCAL
   constructor(
     private http: HttpClient,
     // @Inject(ENVIRONMENTTOKEN) private env: IEnvironment, // FOR VARIABLE ENVS

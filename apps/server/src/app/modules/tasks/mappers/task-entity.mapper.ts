@@ -6,7 +6,7 @@ import { CreateTaskDto } from "apps/server/src/app/modules/tasks/dto/create-task
 
 export const mapCreateTaskDataToTaskEntity = (req: CreateTaskDto): TaskEntity => {
   const entity: TaskEntity = new TaskEntity();
-  entity.id = 'abcdef'; // uuidv7
+  entity.id = '123e4567-e89b-12d3-a456-426614174000'; // uuidv7
 
   entity.name = req.name;
   entity.description = req.description;
