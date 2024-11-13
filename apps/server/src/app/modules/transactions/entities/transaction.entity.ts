@@ -6,11 +6,11 @@ import { TaskEntity } from '../../tasks/entities/task.entity';
 @Entity('transactions')
 export class TransactionEntity extends AbstractEntity {
   @Column({ type: 'varchar', length: 255 })
-  name: string;
+  name?: string;
 
   @Column({ type: 'text' })
-  description: string;
+  description?: string;
 
   @OneToMany(() => TaskEntity, (task: TaskEntity) => task.id)
-  tasks: TaskEntity;
+  tasks?: TaskEntity;
 }

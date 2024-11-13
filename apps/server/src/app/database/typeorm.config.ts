@@ -1,12 +1,15 @@
 import * as dotenv from 'dotenv';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { SeederOptions } from 'typeorm-extension';
-import { SnakeNamingStrategy } from './strategies/snake-naming.strategy';
 
-dotenv.config({ path: 'apps/api/.env' });
+import { SnakeNamingStrategy } from './strategies/snake-naming.strategy';
+import { MainSeeder } from './seeding/main.seeder';
+
+dotenv.config({ path: 'apps/server/.env' });
 
 export const dataSourceOptions: DataSourceOptions & SeederOptions = {
-  type: 'mysql',
+  type: 'postgres',
+  url: process.env.DATABASE_URL,
   host: process.env.DB_HOST,
   port: +process.env.DB_PORT,
   username: process.env.DB_USERNAME,
@@ -20,8 +23,11 @@ export const dataSourceOptions: DataSourceOptions & SeederOptions = {
   migrationsRun: false,
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
   migrations: [__dirname + '/../**/migrations/*{.ts,.js}'],
-
-//   seeds: [MainSeeder],
+  seeds: [MainSeeder],
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  extra: {
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  },
 };
 
 const AppDataSource: DataSource = new DataSource(dataSourceOptions);

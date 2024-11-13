@@ -2,7 +2,7 @@ import { BaseEntity, CreateDateColumn, PrimaryGeneratedColumn, UpdateDateColumn 
 
 export abstract class AbstractEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid', { name: 'id' })
-  id: string;
+  id?: string;
 
   @CreateDateColumn()
   createdAt?: Date;

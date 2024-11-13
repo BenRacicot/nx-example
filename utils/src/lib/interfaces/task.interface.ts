@@ -1,7 +1,3 @@
-export interface ITaskReq {
-  id: string;
-}
-
 export interface ITask {
   id: string;
   name: string;
