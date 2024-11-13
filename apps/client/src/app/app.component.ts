@@ -24,8 +24,8 @@ export class AppComponent implements OnInit {
     this.getTask('1234');
   }
 
-  createTask(): Observable<ICreateTaskDto> {
-    return this.apiService.post<ITask>(`${this.url}`, );
+  createTask(req: ICreateTaskDto): Observable<ITask> {
+    return this.apiService.post<ITask>(`${this.url}`, req);
   }
 
   getTask(id: string): Observable<ITask> {
