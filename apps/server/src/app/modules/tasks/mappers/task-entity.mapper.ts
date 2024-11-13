@@ -1,4 +1,4 @@
-import { ITask } from "@interfaces/task.interface";
+import { ITask } from "@interfaces";
 
 import { TaskEntity } from "../entities/task.entity";
 import { mapTransactionEntitytoTransaction } from "../../transactions/mappers/transaction.mappers";
@@ -15,12 +15,19 @@ export const mapCreateTaskDataToTaskEntity = (req: CreateTaskDto): TaskEntity =>
 };
 
 export const mapTaskEntityToTask = (entity: TaskEntity): ITask => {
+  if (!entity.transaction) {
+    throw new Error('Transaction is required for Task entity');
+  }
+  if (!entity.id) {
+    throw new Error('An id is required for Task entity');
+  }
+
   return {
     id: entity?.id,
-    name: entity?.name,
-    description: entity?.description,
+    name: entity?.name || '',
+    description: entity?.description || '',
     agent: {
-      id: entity?.agentId,
+      id: entity?.agentId || '',
     },
     transaction: mapTransactionEntitytoTransaction(entity?.transaction),
   }

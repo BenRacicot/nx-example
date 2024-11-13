@@ -22,11 +22,17 @@ export class TasksService {
     return mapTaskEntityToTask(entity);
   }
 
-  async findOne(id: string): Promise<TaskEntity | null> {
-    return await this.repository.findOne({
+  async findOne(id: string): Promise<ITask> {
+    const entity = await this.repository.findOne({
       where: { id },
       select: ['transaction']
     });
+  
+    if (!entity) {
+      throw new NotFoundException(`Task with ID ${id} not found`);
+    }
+  
+    return mapTaskEntityToTask(entity);
   }
 
   async update(id: string, req: UpdateTaskDto): Promise<ITask> {

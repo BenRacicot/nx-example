@@ -38,76 +38,76 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tools/scripts/typeorm-migration.sh",
-        "hash": "5218735407641231932"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "16985799198921668765"
-      },
-      {
-        "file": "tools/tsconfig.tools.json",
-        "hash": "16572686366626738623"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "10389413185786224193"
-      },
-      {
-        "file": "README.md",
-        "hash": "628625942425629471"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "10458616818310374495"
+        "file": "package.json",
+        "hash": "15434965496144105866"
       },
       {
         "file": "npm-install-87147.sh",
         "hash": "2496751648001979831"
       },
       {
-        "file": "package.json",
-        "hash": "15434965496144105866"
+        "file": ".gitignore",
+        "hash": "11909803790244710708"
       },
       {
-        "file": "nx.json",
-        "hash": "1893606824445445448"
+        "file": "docker-compose.yml",
+        "hash": "16985799198921668765"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "10458616818310374495"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "16572686366626738623"
       },
       {
         "file": "typeorm.tsconfig.json",
         "hash": "13421920452225033721"
       },
       {
-        "file": ".gitignore",
-        "hash": "11909803790244710708"
+        "file": "package-lock.json",
+        "hash": "10389413185786224193"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "README.md",
+        "hash": "628625942425629471"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1893606824445445448"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "tools/scripts/typeorm-migration.sh",
+        "hash": "5218735407641231932"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
       }
     ],
     "projectFileMap": {
@@ -400,7 +400,7 @@
         },
         {
           "file": "apps/server/src/app/modules/tasks/mappers/task-entity.mapper.ts",
-          "hash": "13204089086933719100",
+          "hash": "3032959528113216269",
           "deps": [
             "utils"
           ]
@@ -423,7 +423,7 @@
         },
         {
           "file": "apps/server/src/app/modules/tasks/tasks.service.ts",
-          "hash": "14865057000702692140",
+          "hash": "15005439350248471201",
           "deps": [
             "npm:@nestjs/common",
             "npm:typeorm",
@@ -447,14 +447,14 @@
         },
         {
           "file": "apps/server/src/app/modules/transactions/entities/transaction.entity.ts",
-          "hash": "6649700002843974287",
+          "hash": "18348592960510411313",
           "deps": [
             "npm:typeorm"
           ]
         },
         {
           "file": "apps/server/src/app/modules/transactions/mappers/transaction.mappers.ts",
-          "hash": "3268102207177721478",
+          "hash": "14706105237968782614",
           "deps": [
             "utils"
           ]
@@ -483,7 +483,7 @@
         },
         {
           "file": "apps/server/src/app/shared/abstract.entity.ts",
-          "hash": "4503841053335257839",
+          "hash": "4064881901367524469",
           "deps": [
             "npm:typeorm"
           ]
@@ -502,7 +502,7 @@
         },
         {
           "file": "apps/server/tsconfig.app.json",
-          "hash": "13194024223635568693"
+          "hash": "11068673929423188855"
         },
         {
           "file": "apps/server/tsconfig.json",
@@ -574,7 +574,7 @@
         },
         {
           "file": "utils/tsconfig.lib.json",
-          "hash": "3376718643524667211"
+          "hash": "14539327243516648733"
         },
         {
           "file": "utils/tsconfig.spec.json",
