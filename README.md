@@ -12,7 +12,8 @@ comes with a LSP for Vim users.
  - `npm install -g @angular/cli` [Angular](https://angular.io/cli)
  - `npm add --global nx@latest` [Nx](https://nx.dev/getting-started/intro) 
  - Install docker: https://www.docker.com/products/docker-desktop/
- - Run: `docker-compose up -d`
+ - `docker compose up -d` # `docker compose down` to remove instance/db
+ - seed postgress db: `./tools/scripts/typeorm-migration.sh master`
 
 ## Start the application
 
