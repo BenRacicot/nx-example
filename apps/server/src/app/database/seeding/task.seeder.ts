@@ -22,8 +22,6 @@ export function generateTasks(
     task.updatedAt = faker.date.recent();
     task.name = faker.company.catchPhrase();
     task.description = faker.lorem.paragraph();
-    task.agentId = agentIds[i % agentIds.length];
-    task.transactionId = transactionIds[i % transactionIds.length];
     tasks.push(task);
   }
 
@@ -36,8 +34,9 @@ export class TaskSeeder implements Seeder {
     const agents = await dataSource.getRepository(AgentEntity).find();
     const transactions = await dataSource.getRepository(TransactionEntity).find();
     
-    const agentIds = agents.map(agent => agent.id);
-    const transactionIds = transactions.map(transaction => transaction.id);
+    // Filter out any undefined IDs
+    const agentIds = agents.map(agent => agent.id).filter((id): id is string => id !== undefined);
+    const transactionIds = transactions.map(transaction => transaction.id).filter((id): id is string => id !== undefined);
     
     const tasks = generateTasks(agentIds, transactionIds);
     

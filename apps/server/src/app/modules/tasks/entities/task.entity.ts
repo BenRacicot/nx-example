@@ -10,18 +10,12 @@ export class TaskEntity extends AbstractEntity {
   @Column({ type: 'varchar', length: 255 })
   name?: string;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column({ type: 'varchar' })
   description?: string;
 
-  @Column({ type: 'uuid' })
-  agentId?: string;
-
-  @OneToOne(() => AgentEntity, (agent: AgentEntity) => agent.id)
+  @ManyToOne(() => AgentEntity, (agent: AgentEntity) => agent.tasks)
   agent?: AgentEntity;
 
-  @Column({ type: 'uuid' })
-  transactionId?: string;
-
-  @ManyToOne(() => TransactionEntity, (transaction: TransactionEntity) => transaction.id)
+  @ManyToOne(() => TransactionEntity, (transaction: TransactionEntity) => transaction.tasks)
   transaction?: TransactionEntity;
 }

@@ -4,23 +4,23 @@ import { UpdateAgentDto } from './dto/update-agent.dto';
 
 @Injectable()
 export class AgentsService {
-  create(createAgentDto: CreateAgentDto) {
-    return 'This action adds a new agent';
-  }
+  // create(createAgentDto: CreateAgentDto): Promise<IAgent | null> {
+  //   return 'This action adds a new agent';
+  // }
 
-  findAll() {
-    return `This action returns all agents`;
-  }
+  // findAll(): Promise<IAgent[] | null> {
+  //   return `This action returns all agents`;
+  // }
 
-  findOne(id: number) {
-    return `This action returns a #${id} agent`;
-  }
+  // findOne(id: number): Promise<IAgent | null> {
+  //   return `This action returns a #${id} agent`;
+  // }
 
-  update(id: number, updateAgentDto: UpdateAgentDto) {
-    return `This action updates a #${id} agent`;
-  }
+  // update(id: number, updateAgentDto: UpdateAgentDto): Promise<IAgent | null> {
+  //   return `This action updates a #${id} agent`;
+  // }
 
-  remove(id: number) {
-    return `This action removes a #${id} agent`;
-  }
+  // remove(id: number): boolean {
+  //   return `This action removes a #${id} agent`;
+  // }
 }

@@ -10,8 +10,7 @@ export class AgentSeeder implements Seeder {
   async run(dataSource: DataSource): Promise<void> {
     // First, get existing tasks
     const tasks = await dataSource.getRepository(TaskEntity).find();
-    const taskIds = tasks.map(task => task.id);
-    
+    const taskIds = tasks.map(task => task.id).filter((id): id is string => id !== undefined);;
     const agents = generateAgents(taskIds);
     
     await dataSource
@@ -33,7 +32,7 @@ export function generateAgents(taskIds: string[] = []): AgentEntity[] {
     agent.createdAt = faker.date.past();
     agent.updatedAt = faker.date.recent();
     agent.name = faker.person.fullName();
-    agent.taskId = taskIds[i % taskIds.length];
+    
     agents.push(agent);
   }
 

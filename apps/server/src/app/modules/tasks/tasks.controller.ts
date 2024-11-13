@@ -17,7 +17,7 @@ export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
 
   @Post()
-  create(@Body() createTaskDto: CreateTaskDto): Promise<ITask>  {
+  create(@Body() createTaskDto: CreateTaskDto): Promise<ITask> {
     return this.tasksService.create(createTaskDto);
   }
 
@@ -27,7 +27,7 @@ export class TasksController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() req: UpdateTaskDto) {
+  update(@Param('id') id: string, @Body() req: UpdateTaskDto): Promise<ITask | null> {
     return this.tasksService.update(id, req);
   }
 

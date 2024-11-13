@@ -26,9 +26,7 @@ export const mapTaskEntityToTask = (entity: TaskEntity): ITask => {
     id: entity?.id,
     name: entity?.name || '',
     description: entity?.description || '',
-    agent: {
-      id: entity?.agentId || '',
-    },
+    agent: entity?.agent,
     transaction: mapTransactionEntitytoTransaction(entity?.transaction),
   }
 }

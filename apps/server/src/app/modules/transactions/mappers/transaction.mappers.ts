@@ -8,7 +8,7 @@ export const mapTransactionEntitytoTransaction = (entity: TransactionEntity): IT
   }
   return {
     id: entity.id,
-    name: entity.name,
-    description: entity.description,
+    name: entity.name || '',
+    description: entity.description || '',
   };
 };

@@ -2,7 +2,7 @@ import { IsString, IsOptional } from 'class-validator';
 
 export class CreateTransactionDto {
   @IsString()
-  name: string;
+  name?: string;
 
   @IsString()
   @IsOptional()
