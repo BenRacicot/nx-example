@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { Observable, take } from 'rxjs';
 
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { v7 as uuidv7 } from 'uuid';
+
 import { ICreateTaskDto, ITask, IUpdateTaskDto } from '@interfaces';
 import { ApiService } from './services/api.service';
 

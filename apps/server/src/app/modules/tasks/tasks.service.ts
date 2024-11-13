@@ -38,16 +38,25 @@ export class TasksService {
         id: true,
         name: true,
         description: true,
-        agent: {
-          id: true,
-          // other agent fields you need
-        },
-        transaction: {
-          id: true,
-          // other transaction fields you need
-        },
       },
     });
+
+    // or with queryBuilder for more SQL type flexibility
+    // const entity = await this.repository
+    //   .createQueryBuilder('task')
+    //   .leftJoinAndSelect('task.transaction', 'transaction')
+    //   .leftJoinAndSelect('task.agent', 'agent')
+    //   .select([
+    //     // only the props you want returned
+    //     'task.id',
+    //     'task.name',
+    //     'task.description',
+    //     'agent.id',
+    //     'transaction.id'
+    //   ])
+    //   .where('task.id = :id', { id })
+    //   .getOne();    
+
 
     if (!entity) {
       throw new NotFoundException(`Task with ID ${id} not found`);
