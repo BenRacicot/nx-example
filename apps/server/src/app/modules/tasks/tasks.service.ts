@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Repository } from 'typeorm';
+import { getManager, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { TaskEntity } from './entities/task.entity';
@@ -26,8 +26,10 @@ export class TasksService {
     return mapTaskEntityToTask(entity);
   }
 
+  // THIS IS THE MAIN POINT OF THIS REPO
   async findOne(id: string): Promise<ITask> {
-    const entity = await this.repository.findOne({
+    // using TypeORM (or any ORM) is now standard practice
+    const entity: TaskEntity | null = await this.repository.findOne({
       where: { id },
       relations: {
         transaction: true,
@@ -41,8 +43,9 @@ export class TasksService {
       },
     });
 
-    // or with queryBuilder for more SQL type flexibility
-    // const entity = await this.repository
+    // Option 2: Using QueryBuilder
+    // for slightly lower-level, SQL-like flexibility
+    // const entity: TaskEntity | null = await this.repository
     //   .createQueryBuilder('task')
     //   .leftJoinAndSelect('task.transaction', 'transaction')
     //   .leftJoinAndSelect('task.agent', 'agent')
@@ -57,6 +60,39 @@ export class TasksService {
     //   .where('task.id = :id', { id })
     //   .getOne();    
 
+    // recommendation: when your queries get complicated (like options 3 and 4) encapsulate them in a helper service pattern
+    // const entity: TaskEntity | null = await this.taskHelperService.complexQuery();
+
+    // Option 3: Raw SQL using DataSource - add in ctor @InjectDataSource() private dataSource: DataSource
+    // const entity: TaskEntity | null = await this.dataSource.query(`
+    //   SELECT 
+    //     t.id,
+    //     t.name,
+    //     t.description,
+    //     a.id as agent_id,
+    //     tr.id as transaction_id
+    //   FROM tasks t
+    //   LEFT JOIN agents a ON t.agent_id = a.id
+    //   LEFT JOIN transactions tr ON t.transaction_id = tr.id
+    //   WHERE t.id = $1
+    // `, [id]);
+
+    // Option 4: Transaction with raw SQL
+    // await this.dataSource.transaction(async transactionalManager => {
+    //   const entities: TaskEntity[] | null  = await transactionalManager.query(`
+    //     SELECT * FROM tasks
+    //     WHERE id = $1
+    //     FOR UPDATE
+    //   `, [id]);
+
+    //   if (entities.length > 0) {
+    //     await transactionalManager.query(`
+    //       UPDATE tasks
+    //       SET last_accessed = NOW()
+    //       WHERE id = $1
+    //     `, [id]);
+    //   }
+    // });
 
     if (!entity) {
       throw new NotFoundException(`Task with ID ${id} not found`);

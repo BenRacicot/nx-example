@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     this.getTask('019326b2-e5ec-72e2-b169-4012eac12687')
       .pipe(take(1))
       .subscribe({
-        next: (res: any) => {
+        next: (res: ITask) => {
           console.log(res);
         },
         error: (res: any) => console.error(res),

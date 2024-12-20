@@ -1,5 +1,13 @@
 # Nx Example (Author: @BenRacicot)
 
+This repo is an example of how modern development with Angular, NestJS and TypeORM (any ORM) can save you from antiquated development processes.
+Having both the API and APP projects inside an Nx monorepo (monolithic) allows many conveniences such a shared utils library, namely TypeScript interfaces.
+
+Please note the main example flow and the patterns that follow:
+ - apps/client/src/app/app.component.ts: `getTask('019326b2-e5ec-72e2-b169-4012eac12687')`
+ - apps/server/src/app/modules/tasks/tasks.controller.ts: `@Get(':id')...`
+ - apps/server/src/app/modules/tasks/tasks.service.ts: `findOne(...`
+
 ## Integrate with editors
 
 Enhance your Nx experience by installing [Nx Console](https://nx.dev/nx-console) for your favorite editor. Nx Console
